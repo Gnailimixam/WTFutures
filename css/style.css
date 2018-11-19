@@ -122,6 +122,9 @@ img:focus{
 	outline:0;
 	background:none;
 }
+img:active{
+	background:none;
+	outline:0;}
 
 img:hover {
   animation: shake 0.7s infinite;
