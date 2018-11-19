@@ -180,6 +180,10 @@ footer a:hover {
 	text-decoration: underline;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 323b52bd701977ff8b3dcdf5345098d4f0ac66fa
 @media only screen and (orientation: portrait) and (min-height: 1334px){
 	#wrapper {
 		width: 85%;
@@ -240,6 +244,10 @@ footer a:hover {
 		transform: translate(-50%, -50%);
 	}
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> 323b52bd701977ff8b3dcdf5345098d4f0ac66fa
 @media only screen and (orientation:portrait) and (max-height:  1330px){
 	footer {
 		position: relative;
