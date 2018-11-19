@@ -221,7 +221,7 @@ footer a:hover {
 		height: 160px;
 	}
 	footer {
-		position:fixed;
+
 		font-size: 20px;
 		line-height: normal;
 		left: 50%;
@@ -240,7 +240,7 @@ footer a:hover {
 	}
 }
 
-@media only screen and (orientation:landscape) and (max-height: 750px){
+@media only screen and (orientation:landscape) and (max-height: 750px) and (max-width:1320px){
 	img {
 		margin: 3% 2% 2% 2%;
 		width: 100px;
