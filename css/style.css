@@ -91,16 +91,11 @@ noscript {
 #likebtn {
 	text-decoration:  underline;
 	font-size: 20px;
-
 	color: #000;
 	position: relative;
 	bottom: 0;
 	left: 0;
 }
-#likebtn:focus{background:transparent;}
-#likebtn:active{
-	background:transparent;
-	outline:0;}
 
 #dislikebtn {
 	margin-right: 20px;
@@ -115,13 +110,17 @@ noscript {
 
 a {
   -webkit-tap-highlight-color: transparent;
+	-webkit-tap-highlight-color: rgba(0,0,0,0);
+
 }
 
 img {
 	margin:-60px 2% 0% 2%;
 	width:100px;
 	height: 100px;
-	animation: scale 2s ease-in-out infinite;
+	/*animation: scale 2s ease-in-out infinite;*/
+	-webkit-filter: drop-shadow(5px 5px 5px #222);
+  filter: drop-shadow(5px 5px 5px #222);
 
 }
 
