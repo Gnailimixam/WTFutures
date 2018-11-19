@@ -180,7 +180,7 @@ footer a:hover {
 	text-decoration: underline;
 }
 
-@media only screen and (orientation: portrait) and (min-height: 640px){
+
 @media only screen and (orientation: portrait) and (min-height: 1334px){
 	#wrapper {
 		width: 85%;
@@ -241,7 +241,7 @@ footer a:hover {
 		transform: translate(-50%, -50%);
 	}
 }
-@media only screen and (orientation:portrait) and (max-height: 568px){
+
 @media only screen and (orientation:portrait) and (max-height:  1330px){
 	footer {
 		position: relative;
