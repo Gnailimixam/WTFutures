@@ -96,7 +96,7 @@ noscript {
 	bottom: 0;
 	left: 0;
 }
-
+#likebtn:focus{outline:0;}
 
 #dislikebtn {
 	margin-right: 20px;
@@ -106,17 +106,9 @@ noscript {
 	bottom: 0;
 	right: 0;
 }
+#dislikebtn:focus{outline:0;}
 
 
-
-.like_text {
-	font-weight: 600;
-	font-size: 30px;
-	line-height: 60px;
-	text-align: center;
-	display: inline;
-
-}
 
 
 img {
@@ -220,8 +212,9 @@ footer a:hover {
 		width: 160px;
 		height: 160px;
 	}
-	footer {
 
+
+	footer {
 		font-size: 20px;
 		line-height: normal;
 		left: 50%;
@@ -229,6 +222,7 @@ footer a:hover {
 		transform: translate(-50%, -50%);
 	}
 }
+
 @media only screen and (orientation: portrait) and (max-height: 750px) {
 	footer {
 		position: relative;
