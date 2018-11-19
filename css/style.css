@@ -96,7 +96,7 @@ noscript {
 	bottom: 0;
 	left: 0;
 }
-#likebtn:focus{outline:0;}
+
 
 #dislikebtn {
 	margin-right: 20px;
@@ -106,7 +106,7 @@ noscript {
 	bottom: 0;
 	right: 0;
 }
-#dislikebtn:focus{outline:0;}
+
 
 
 
@@ -117,6 +117,8 @@ img {
 	height: 100px;
 	animation: scale 2s ease-in-out infinite;
 }
+
+img:focus{outline:0;}
 
 img:hover {
   animation: shake 0.7s infinite;
