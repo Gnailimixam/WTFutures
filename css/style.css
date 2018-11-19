@@ -2,67 +2,156 @@
 	-- begin reset
 */
 
-html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;background:transparent;}body{line-height:1;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}nav ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;}ins{background-color:#ff9;color:#000;text-decoration:none;}mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold;}del{text-decoration:line-through;}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help;}table{border-collapse:collapse;border-spacing:0;}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0;}input,select{vertical-align:middle;}
+
+html,body,div,span,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,abbr,address,cite,code,del,dfn,em,img,ins,kbd,q,samp,small,strong,sub,sup,var,b,i,dl,dt,dd,dask,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;outline:0;font-size:100%;vertical-align:baseline;}body{line-height:1;}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block;}nav ul{list-style:none;}blockquote,q{quotes:none;}blockquote:before,blockquote:after,q:before,q:after{content:'';content:none;}a{margin:0;padding:0;font-size:100%;vertical-align:baseline;background:transparent;}ins{background-color:#ff9;color:#000;text-decoration:none;}mark{background-color:#ff9;color:#000;font-style:italic;font-weight:bold;}del{text-decoration:line-through;}abbr[title],dfn[title]{border-bottom:1px dotted;cursor:help;}table{border-collapse:collapse;border-spacing:0;}hr{display:block;height:1px;border:0;border-top:1px solid #ccc;margin:1em 0;padding:0;}input,select{vertical-align:middle;}
 
 /*
 	-- end reset
 */
 
 body {
-	font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+	font-family:  Helvetica, Arial, sans-serif; /*"Helvetica Neue", Helvetica, Arial, sans-serif;*/
+	font-style: normal;
 	text-transform: initial;
-
-	/*transition :2s;*/
+	background-color: #ffff;
+	/*background-color: #000 ;*/
+	transition :0.7s;
+	position: relative;
+	height: 100%;
 }
 
 #wrapper {
-	width: 710px;
+	width: 60%;
 	margin: 0 auto;
+	height: 100%;
 }
 
-header, article {
-	font-weight: 800;
+header, article, h1 {
+	font-weight: 400; /* changes thickness!!*/
 	color: #000;
 }
 
 header {
-	margin-top: 70px;
+	margin-top: 20px;
 }
 
 header h1 {
-	font-size: 60px;
+	font-weight: 700;
+	font-size: 24px;
 	line-height: 60px;
-	display: none;
+	/*text-align: center;*/
+	display: block;
 }
 
 #output {
 	font-size: 48px;
-	line-height: 48px;
-	margin: 60px 0;
+	line-height: normal;
+	/*margin: 60px 0;*/
 }
 
 noscript {
 	font-weight: 800;
-	font-size: 48px;
+	font-size: 45px;
 	line-height: 48px;
 	margin: 60px 0;
 }
 
-#output dd {
+#output dt {
+	font-size: 42px;
+	font-weight: 700;
+	font-style: normal;
+	text-transform: uppercase;
 	display: block;
-	margin: 60px 0;
+	margin-top: 100px;
+	margin-bottom: 60px;
 }
 
-#generate {
-	text-decoration: none;
+#output dd {
+	font-family: "Times New Roman", Times, serif;
+	font-size: 54px;
+	display: block;
+	text-align: justify;
+	/*line-height: 54px;*/
+	line-height:100%;
+	text-indent: 8%;
+	margin-top: 50px;
+	margin-bottom: 100px;
+}
+
+#output dask {
+	font-size: 32px;
+	font-weight: 600;
+	font-style: normal;
+	text-align: center;
+	display: block;
+}
+
+
+#likebtn {
+	text-decoration:  underline;
+	font-size: 20px;
+
+	color: #000;
+	position: relative;
+	bottom: 0;
+	left: 0;
+}
+
+
+#dislikebtn {
+	margin-right: 20px;
 	font-size: 20px;
 	color: #000;
+	position: relative;
+	bottom: 0;
+	right: 0;
 }
 
-#generate:hover {
-	text-decoration: underline;
-	color: black;
+
+.like_text {
+	font-weight: 600;
+	font-size: 30px;
+	line-height: 60px;
+	text-align: center;
+	display: inline;
+
 }
+
+img {
+	margin: 0 2%;
+	margin-top: -60px;
+	width:100px;
+	height: 100px;
+	animation: scale 2s ease-in-out infinite;
+
+
+}
+
+img:hover {
+  animation: shake 0.7s infinite;
+}
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-2px, 0px) rotate(1deg); }
+  30% { transform: translate(2px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-2px, 1px) rotate(0deg); }
+  70% { transform: translate(2px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+@keyframes scale {
+	0% { transform: scale(1.0); }
+	50% { transform: scale(1.1); }
+	100% { transform: scale(1.0); }
+}
+
+
+
+
 
 aside {
 	position: absolute;
@@ -71,28 +160,16 @@ aside {
 	top: 0;
 }
 
-#share li {
-	list-style: none;
-	display: inline;
-}
-
-#share-facebook {}
-#share-twitter {position: relative; top: -1px;}
-.twitter-share-button {
-	font-size: 11px;
-	color: #000;
-}
-
 footer {
-	text-transform: none;
-	position: absolute;
-	text-align: right;
+	position:  relative;
+	text-align: center;
 	line-height: 16px;
 	font-size: 12px;
 	color: #666;
-	margin: 12px 24px;
 	bottom: 0;
-	right: 0;
+	margin: 20px 0px 5px 0px;
+
+
 }
 
 footer a {
@@ -102,4 +179,50 @@ footer a {
 
 footer a:hover {
 	text-decoration: underline;
+}
+
+@media only screen and (orientation: portrait){
+	#wrapper {
+		width: 85%;
+	}
+
+	header h1 {
+		font-size: 42px;
+		line-height: 60px;
+		margin-top: 50px;
+	}
+
+
+	#output dt {
+		font-size: 52px;
+		margin-top: 120px;
+		margin-bottom: 80px;
+	}
+
+	#output dd {
+
+		font-size: 74px;
+		line-height:120%;
+		margin-top: 50px;
+		margin-bottom: 180px;
+	}
+
+	#output dask {
+		font-size: 52px;
+		margin-bottom: 40px;
+	}
+
+	img {
+		margin: 2% 2%;
+		width: 160px;
+		height: 160px;
+	}
+	footer {
+		position: fixed;
+		font-size: 20px;
+		line-height: normal;
+		left: 50%;
+		transform: translate(-50%, -50%);
+
+
 }

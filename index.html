@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="en"
 
 	<head>
-		<title>Artifact Engine</title>
+
+
+		<title>Future Artefacts Engine</title>
 
 		<meta name="description" content="A mashup idea generator for conjuring Artifacts from the Future" />
 
@@ -15,8 +17,8 @@
 
 		<link rel="stylesheet" href="css/style.css" />
 
-		<script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.5/jquery.min.js"></script>
+		<script src="js/html5shiv.min.js"></script>
+		<script src="js/jquery.min.js"></script>
 		<script>!window.jQuery && document.write(unescape('%3Cscript src="js/lib/jquery-1.5.js"%3E%3C/script%3E'))</script>
 		<script src="js/corpus.js"></script>
 		<script src="js/script.js"></script>
@@ -33,44 +35,67 @@
 		  })();
 		</script>
 
-		<script>
+		<script  type="text/javascript">
+
 		function color() {
-			var hue = Math.floor(Math.random() * 360);
-			var sat = "90%";
-			var light = "75%";
-			var bg = "hsl(" + hue + "," + sat + ","+ light + ");" ;
-			document.body.style.backgroundColor = bg ;
+			var hue = Math.floor(Math.random() * 360) | 0;
+			var sat = 90;
+			var light = 75;
+			var bg = "hsl(" + hue + " ," + sat + "% ,"+ light + "%)" ;
 			console.log(bg);
+			document.body.style.backgroundColor = bg;
 		}
 		</script>
 
-
-
-
 	</head>
 
-	<body  onload= "color()">
 
 
+	<body onload= "color()">
 		<div id="wrapper">
-
 			<header>
-				<h1>What is the story about the future?</h1>
+				<h1>The future-generator says...</h1>
 			</header>
 
 			<article>
 				<div id="output">
 
 				</div>
-				<a id="generate" href="#" title="Hit me again!"></a>
+				<a id="likebtn"   onclick="react('like');" height="50" href="#"><img border="0" alt="Like" src="img/love_it.png"  float= "left"></a>
+				<a id="dislikebtn"  onclick="react('dislike');" href="#"><img border="0" alt="Dislike" src="img/hate_it.png"  align="right"></a>
 			</article>
 
 			<footer>
-				<p><a href="http://www.maxgossler.com">Maximilian Gossler</a></p>
+				<p><a href="mailto:info@maxgossler.com">Maximilian Goßler</a></p>
 				<p>Inspired by soulwire's <a href="https://github.com/soulwire/WTFEngine">WTFEngine</a></p>
+				<!--<a style="text-decoration: none; font-size: 18px; color: #000; font-weight: 800; margin-top: 70px; opacity:0.1;"  href="https://docs.google.com/spreadsheets/d/1U4NaVB0jAQXUE8FPjxTA2GccB8Ae19YnY-5G3YRmydM/edit#gid=0" target="_blank">Most liked creations (new window)</a>
+					-->
 			</footer>
 
 		</div>
+
+
+		<script>
+         function react(reaction){
+          var sentence = document.getElementsByTagName("dd")[0].innerHTML;
+          var timer = new Date();
+          var time = timer.toLocaleDateString() + " | " + timer.toLocaleTimeString();
+          console.log(document.getElementsByTagName("dd")[0].innerHTML);
+        $.ajax({
+            url: 'https://script.google.com/macros/s/AKfycbwFJyAzbKuVqbAK2URyiMJC8u_RmMi70Jl3HWlGpSxE-GqNdaCV/exec?time=' + time + '&sentence=' + sentence + '&reaction=' + reaction,
+            method: "GET",
+            dataType: "json"
+          }).success(function(){
+             console.log("Delivered!");
+        });
+        setTimeout(function(){
+            location.reload();
+        }, 101);
+     }
+  </script>
+
+
+
 
 	</body>
 
