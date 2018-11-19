@@ -19,17 +19,22 @@
 var dom = {};
 var regex = /./;
 var vowel = /\b(a)\b(\s+)?(((<[^>]+>)\s?)+)?(\s+)?([aeiou]|hou)/gim;
+var limits = {verb:[0,8],
+							context: [0,6],
+							noun:[0,8],
+							adjective:[0,6]
+						}
 
 // init
 
 function initialise() {
 
 	dom.generate.click(function(){
-	
+
 		update();
 		return false;
 	});
-	
+
 	regex = generateRegExp();
 	update();
 }
@@ -41,7 +46,7 @@ function update() {
 	dom.output.html(generateIdea());
 	dom.output.hide();
 	dom.output.fadeIn(500);
-	
+
 	setGenerateLabel();
 }
 
@@ -52,55 +57,64 @@ function generateRegExp() {
 	var str = '';
 	var arr = [];
 	var tmp = "@(types)";
-	
+
 	for(type in corpus) {
 		arr.push(type);
 	}
-	
+
 	var exp = tmp.replace("types", arr.join('|'));
-	
+
 	return new RegExp(exp, "ig");
 }
 
 // generate idea
 
 function generateIdea() {
-	
+
 	var type;
 	var match;
 	var index;
 	var intro;
 	var output;
-	
+
 	var template = templates[(Math.random() * templates.length) | 0];
-	
+
 	var data = {};
-	
+
 	for(var prop in corpus) {
 		data[prop] = corpus[prop].concat();
 	}
-	
+
 	var result = regex.exec(template);
-	
+
 	while(result) {
-	
+
 		type = result[1];
 		match = result[0];
-		
-		index = (Math.random() * data[type].length) | 0;
+		if(type == "who"){
+			index = (Math.random() * data[type].length) | 0;
+			console.log(index)
+		}
+		else {
+			index = ((Math.random() * limits[type][1]) + limits[type][0]) | 0;
+			console.log(type + index)
+		}
+
 		template = template.replace(match, data[type].splice(index, 1)[0]);
-		
+
 		regex.lastIndex = 0;
 		result = regex.exec(template);
 	}
-	
+
 	var intro = phrases[(Math.random() * phrases.length) | 0];
-	
+	var dask = ask[(Math.random() * ask.length) | 0];
+
 	output = "<dl>";
 	output += "<dt>" + intro + "</dt>";
 	output += "<dd>" + template + "</dd>";
+	output += "<dask>" + dask + "</dask>";
 	output += "</dl>";
-	
+
 	return correctGrammar(output);
 }
 
@@ -120,7 +134,7 @@ function setGenerateLabel() {
 
 	var label = labels[(Math.random() * labels.length) | 0];
 	dom.generate.text(label);
-	
+
 }
 
 // ready
@@ -129,11 +143,11 @@ $(document).ready(function(){
 
 	dom.output = $("#output");
 	dom.generate = $("#generate");
-	
+
 	if(corpus) {
 		initialise();
 	} else {
 		//console.log("corpus not found");
 	}
-	
+
 });

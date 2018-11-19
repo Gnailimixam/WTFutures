@@ -118,7 +118,7 @@ noscript {
 }
 
 img {
-	margin: 0 2%;
+	margin: 2% 2%;
 	margin-top: -60px;
 	width:100px;
 	height: 100px;
@@ -223,6 +223,12 @@ footer a:hover {
 		line-height: normal;
 		left: 50%;
 		transform: translate(-50%, -50%);
+}
 
-
+@media only screen and (max-width: 900px){
+	img {
+		margin:5% 2% 2% 2%;
+		width: 160px;
+		height: 160px;
+	}
 }
