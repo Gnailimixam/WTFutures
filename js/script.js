@@ -19,17 +19,12 @@
 var dom = {};
 var regex = /./;
 var vowel = /\b(a)\b(\s+)?(((<[^>]+>)\s?)+)?(\s+)?([aeiou]|hou)/gim;
-<<<<<<< HEAD
+
 var limits = {verb:[0,8],
-							context: [0,6],
-							noun:[0,8],
-=======
-var limits = {verb:[0,6],
-							context: [0,6],
-							noun:[0,6],
->>>>>>> ea2073ef69888bf6ca721284e0144adbafc4d866
-							adjective:[0,6]
-						}
+		context: [0,6],
+		noun:[0,8],
+		adjective:[0,6]
+	}
 
 // init
 
