@@ -28,7 +28,8 @@ var phrases = [
 
 var ask = [
 	"Do you like your future?",
-	"How do you feel about that future?"
+	"How do you feel about that future?",
+	"Can You just not wait for it?"
 ];
 
 var labels = [
