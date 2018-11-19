@@ -121,9 +121,12 @@ img {
 	/*animation: scale 2s ease-in-out infinite;*/
 	-webkit-filter: drop-shadow(5px 5px 5px #222);
   filter: drop-shadow(5px 5px 5px #222);
-
 }
-
+img:active{
+	transform: scale(0.95);
+	-webkit-filter: drop-shadow(2px 2px 2px #222);
+  filter: drop-shadow(2px 2px 2px #222);
+}
 img:hover {
   animation: shake 0.7s infinite;
 }
