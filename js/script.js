@@ -113,6 +113,7 @@ function generateIdea() {
 
 	output = "<dl>";
 	output += "<dt>" + intro + "</dt>";
+	//output += "<dd>" + "<span style='background-color:black;'>" + template + "</span>"+"</dd>";
 	output += "<dd>" + template + "</dd>";
 	output += "<dask>" + dask + "</dask>";
 	output += "</dl>";
