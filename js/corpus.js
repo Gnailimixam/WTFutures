@@ -15,8 +15,13 @@
  */
 
 var templates = [
-	"A @who will @verb @context because of a @adjective @noun.",  // 1;
-	"A @who will @verb @context because of a @noun."
+	"A @who will @verb @context because of @adjective @noun.",  // 1;
+	"A @who will @verb @context because of @noun.",
+	"Due to @adjective @noun, a @who will @verb @context.",
+	"A @who will @verb @context cause of @adjective @noun.",
+	"Thanks to the @noun, a @who will @verb @context.",
+	"In a world of @noun, a @who will @verb @context.",
+	"In a @adjective future, a @who will @verb @context."
 ];
 
 var phrases = [
@@ -25,6 +30,8 @@ var phrases = [
 	"This is your future:",
 	"The year is 2035 and this is your world:",
 	"In 16 years, you can see:",
+	"In just 5 years, you'll see:",
+	"The date is 2040. Just imagine:"
 ];
 
 var ask = [
@@ -54,22 +61,26 @@ corpus.who = [
 	"ethical AI",
 	"emotional intelligence",
 	"intelligent assistant",
-	"man-AI cooperation"
+	"man-machine cooperation",
+	"man-AI collaboration"
 		]
 
-corpus.context = [
-	"during work" , //"auf der Arbeit"
-	"in your friendships" ,
-	"in public places" ,
-	"in your family" ,
-	"during sports" ,
-	"during your leisure time" ,
+corpus.context = [  // Wishes? Forsights
+	"during work", //"auf der Arbeit"
+	"in your friendships",
+	"in public places",
+	"in your family",
+	"during sports",
+	"during your leisure time",
 	"in your household",
-	"in public"
+	"in public",
+	"at university",
+	"at evening school",
+	"at your human intelligence tasks"
 ]
 
 corpus.verb = [
-	"help you" , //"Ihenen in der Öffentlichkeit helfen"
+	"help you" , //"Ihnen in der Öffentlichkeit helfen"
 	"empower you",
 	"give you more free time" ,
 	"need your creativity" ,
@@ -88,7 +99,8 @@ corpus.verb = [
 	"save you money",
 	"organize your tasks",
 	"give you informations",
-	"instruct you"
+	"instruct you",
+	"help you make the right decisions"
 ]
 
 corpus.adjective = [
@@ -96,17 +108,23 @@ corpus.adjective = [
 	"ground-breaking",
 	"radical",
 	"improved",
-	"extensive"
+	"comprehensive",
+	"aligned"
 ]
 
 corpus.noun = [
-	"change in society",
-	"change in law",
-	"data privacy act" ,
-	"AI law" ,
-	"jump forward in technology",
-	"way of communication",
-	"smart device" ,
-	"information technology",
-	"communications system"
+	"changes in society",
+	"social changes",
+	"changes in law",
+	"data privacy acts" ,
+	"AI laws" ,
+	"jumps in technology",
+	"technological developments",
+	"communication possibilities",
+	"information technologies",
+	"communications systems",
+	"human computation power",
+	"neuromorphig computing power",
+	"AI managed companies",
+	"communication technologies"
 ]
