@@ -15,7 +15,7 @@
  */
 
 var templates = [
-	"A @who will @verb @context because of @adjective @noun.",  // 1;
+	"A @who will @verb @context because of a @adjective @noun.",  // 1;
 	"A @who will @verb @context."
 ];
 
@@ -23,14 +23,15 @@ var phrases = [
 	"The date is 2024. Just imagine:",
 	"In 10 years, you'll see:",
 	"This is your future:",
-	"The year is 2035 and this is your world:"
+	"The year is 2035 and this is your world:",
+	"In 16 years, you can see:",
 ];
 
 var ask = [
 	"Do you like your future?",
 	"How do you feel about that future?",
 	"Can You just not wait for it?",
-	"I'm in love with it! "
+	"Arenn't you in love with it! "
 ];
 
 var labels = [
@@ -47,13 +48,13 @@ corpus.who = [
 	"speaking AI" ,
 	"arranging intelligence" ,
 	"intelligent robot" ,
-	"detecting AI" ,
+	"observing AI" ,  //= visual-spatial
 	"social intelligence" ,
 	"social AI",
 	"ethical AI",
 	"emotional intelligence",
 	"intelligent assistant",
-	"human+AI team"
+	"human+AI collaboration"
 		]
 
 corpus.context = [
@@ -75,7 +76,7 @@ corpus.verb = [
 	"replace you" ,
 	"do the boring stuff" ,
 	"help you be more flexible" ,
-	"encourage you to do more arts" ,
+	"encourage you to be more creative" ,
 	"encourage you to do more things voluntarily" ,
 	"enhance your human power",
 	"transport you",
@@ -92,20 +93,20 @@ corpus.verb = [
 corpus.adjective = [
 	"big",
 	"enormous",
-	"small",
 	"ground-braking",
 	"radically",
-	"refined"
+	"improved",
+	"extensive"
 ]
 
 corpus.noun = [
-	"society",
+	"change in society",
 	"change in law",
-	"change in data privacy" ,
+	"data privacy act" ,
 	"AI law" ,
-	"change in human rights" ,
 	"leap forward in technology" ,
-	"new way of communication",
-	"new smart device" ,
-	"information technology"
+	"way of communication",
+	"smart device" ,
+	"information technology",
+	"communications system"
 ]
