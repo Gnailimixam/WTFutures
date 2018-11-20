@@ -192,8 +192,9 @@ footer a:hover {
 		word-wrap: break-word;	}
 
 	#output dask {
-		font-size: 52px;
+		font-size: 50px;
 		margin-bottom: 40px;
+		font-weight: 500;
 	}
 
 	img {
@@ -215,17 +216,6 @@ footer a:hover {
 	footer {
 		font-size: 20px;
 		line-height: normal;
-		left: 50%;
-		margin-top: 100px;
-		transform: translate(-50%, -50%);
-	}
-}
-
-@media only screen and (orientation: portrait) and (max-height: 750px) {
-	footer {
-		position: relative;
-		font-size: 20px;
-		line-height: 130%;
 		left: 50%;
 		margin-top: 100px;
 		transform: translate(-50%, -50%);
