@@ -86,7 +86,6 @@ corpus.verb = [
 	"need your creativity" ,
 	"replace you" ,
 	"do the boring stuff" ,
-	"help you be more flexible" ,
 	"encourage you to be more creative" ,
 	"encourage you to do more things voluntarily" ,
 	"enhance your human power",
@@ -100,7 +99,8 @@ corpus.verb = [
 	"organize your tasks",
 	"give you informations",
 	"instruct you",
-	"help you make the right decisions"
+	"help you make the right decisions",
+	"enhance your creativity"
 ]
 
 corpus.adjective = [
