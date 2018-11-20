@@ -14,7 +14,9 @@
  *
  */
 
-var templates = ["A @who will @verb at @context because of a @adjective @noun."
+var templates = [
+	"A @who will @verb @context because of @adjective @noun.",  // 1;
+	"A @who will @verb @context."
 ];
 
 var phrases = [
@@ -41,46 +43,55 @@ var labels = [
 */
 
 corpus = {};
-
 corpus.who = [
-	"visual-spatial intelligence" ,
-	"lingusitic intelligence" ,
-	"logical intelligence" ,
-	"bodily-kinesthetic intelligence" ,
-	"musical intelligence" ,
+	"speaking AI" ,
+	"arranging intelligence" ,
+	"intelligent robot" ,
+	"detecting AI" ,
 	"social intelligence" ,
+	"social AI",
+	"ethical AI",
 	"emotional intelligence",
-	"intelligent assistant"
+	"intelligent assistant",
+	"human+AI team"
 		]
 
-
 corpus.context = [
-	"workplace" ,
-	"friendships" ,
-	"public places" ,
-	"families" ,
-	"sports" ,
-	"leisure time" ,
-	"household"
+	"during work" ,
+	"in your friendships" ,
+	"in public places" ,
+	"in your family" ,
+	"during sports" ,
+	"during your leisure time" ,
+	"in your household",
+	"in public"
 ]
-
 
 corpus.verb = [
-	"help people" ,
-	"empower humans",
-	"make people have more free time" ,
-	"need human's creativity" ,
-	"replace humans" ,
+	"help you" ,
+	"empower you",
+	"give you more free time" ,
+	"need your creativity" ,
+	"replace you" ,
 	"do the boring stuff" ,
-	"help people be more flexible" ,
-	"encourage people to do more arts" ,
-	"encourage humans to do more things voluntarily" ,
-	"enhance human power"
+	"help you be more flexible" ,
+	"encourage you to do more arts" ,
+	"encourage you to do more things voluntarily" ,
+	"enhance your human power",
+	"transport you",
+	"make you become healthier",
+	"teach you new stuff",
+	"manage your finances",
+	"entertain you",
+	"save you time",
+	"save you money",
+	"organize your tasks",
+	"give you informations",
+	"instruct you"
 ]
-
 corpus.adjective = [
 	"big",
-	"enormously",
+	"enormous",
 	"small",
 	"ground-braking",
 	"radically",
@@ -91,7 +102,7 @@ corpus.noun = [
 	"society",
 	"change in law",
 	"change in data privacy" ,
-	"new AI law" ,
+	"AI law" ,
 	"change in human rights" ,
 	"leap forward in technology" ,
 	"new way of communication",
