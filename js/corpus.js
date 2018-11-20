@@ -16,7 +16,7 @@
 
 var templates = [
 	"A @who will @verb @context because of a @adjective @noun.",  // 1;
-	"A @who will @verb @context."
+	"A @who will @verb @context because of a @noun."
 ];
 
 var phrases = [
@@ -31,7 +31,7 @@ var ask = [
 	"Do you like your future?",
 	"How do you feel about that future?",
 	"Can You just not wait for it?",
-	"Arenn't you in love with it! "
+		"How do you feel about that future?",
 ];
 
 var labels = [
@@ -45,8 +45,8 @@ var labels = [
 
 corpus = {};
 corpus.who = [
-	"speaking AI" ,
-	"arranging intelligence" ,
+	"speaking AI" , //"Eine sprechende KI"
+	"logical intelligence" ,
 	"intelligent robot" ,
 	"observing AI" ,  //= visual-spatial
 	"social intelligence" ,
@@ -54,11 +54,11 @@ corpus.who = [
 	"ethical AI",
 	"emotional intelligence",
 	"intelligent assistant",
-	"human+AI collaboration"
+	"man-AI cooperation"
 		]
 
 corpus.context = [
-	"during work" ,
+	"during work" , //"auf der Arbeit"
 	"in your friendships" ,
 	"in public places" ,
 	"in your family" ,
@@ -69,7 +69,7 @@ corpus.context = [
 ]
 
 corpus.verb = [
-	"help you" ,
+	"help you" , //"Ihenen in der Öffentlichkeit helfen"
 	"empower you",
 	"give you more free time" ,
 	"need your creativity" ,
@@ -90,11 +90,11 @@ corpus.verb = [
 	"give you informations",
 	"instruct you"
 ]
+
 corpus.adjective = [
-	"big",
 	"enormous",
-	"ground-braking",
-	"radically",
+	"ground-breaking",
+	"radical",
 	"improved",
 	"extensive"
 ]
@@ -104,7 +104,7 @@ corpus.noun = [
 	"change in law",
 	"data privacy act" ,
 	"AI law" ,
-	"leap forward in technology" ,
+	"jump forward in technology",
 	"way of communication",
 	"smart device" ,
 	"information technology",
