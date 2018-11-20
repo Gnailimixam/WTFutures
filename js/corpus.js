@@ -16,7 +16,6 @@
 
 var templates = [
 	"A @who will @verb @context because of @adjective @noun.",  // 1;
-	"A @who will @verb @context because of @noun.",
 	"Due to @adjective @noun, a @who will @verb @context.",
 	"A @who will @verb @context cause of @adjective @noun.",
 	"Thanks to the @noun, a @who will @verb @context.",
