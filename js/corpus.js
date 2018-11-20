@@ -15,8 +15,6 @@
  */
 
 var templates = ["A @who will @verb at @context because of a @adjective @noun."
-
-
 ];
 
 var phrases = [
@@ -29,7 +27,8 @@ var phrases = [
 var ask = [
 	"Do you like your future?",
 	"How do you feel about that future?",
-	"Can You just not wait for it?"
+	"Can You just not wait for it?",
+	"I'm in love with it! "
 ];
 
 var labels = [
@@ -50,7 +49,8 @@ corpus.who = [
 	"bodily-kinesthetic intelligence" ,
 	"musical intelligence" ,
 	"social intelligence" ,
-	"emotional intelligence"
+	"emotional intelligence",
+	"intelligent assistant"
 		]
 
 

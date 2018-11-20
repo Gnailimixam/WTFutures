@@ -97,7 +97,8 @@ function generateIdea() {
 			console.log(index)
 		}
 		else {
-			index = ((Math.random() * limits[type][1]) + limits[type][0]) | 0;
+			//index = ((Math.random() * limits[type][1]) + limits[type][0]) | 0; // for using limits
+			index = (Math.random() * data[type].length) | 0;
 			console.log(type + index)
 		}
 
