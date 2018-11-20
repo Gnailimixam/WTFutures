@@ -131,36 +131,24 @@ img:hover:not(:active) {
 }
 
 img:active{
-	transform: scale(0.9);
+
+	animation: shake 1s ease-in-out infinite;
 	opacity: 0.5;
 	}
-
 @keyframes shake {
-  0% { transform:scale(1.1) translate(1px, 1px) rotate(0deg); }
-  10% { transform:scale(1.1) translate(-1px, -2px) rotate(-1deg); }
-  20% { transform:scale(1.1) translate(-2px, 0px) rotate(1deg); }
-  30% { transform:scale(1.1) translate(2px, 2px) rotate(0deg); }
-  40% { transform:scale(1.1) translate(1px, -1px) rotate(1deg); }
-  50% { transform:scale(1.1) translate(-1px, 2px) rotate(-1deg); }
-  60% { transform:scale(1.1) translate(-2px, 1px) rotate(0deg); }
-  70% { transform:scale(1.1) translate(2px, 1px) rotate(-1deg); }
-  80% { transform:scale(1.1) translate(-1px, -1px) rotate(1deg); }
-  90% { transform:scale(1.1) translate(1px, 2px) rotate(0deg); }
-  100% { transform:scale(1.1) translate(1px, -2px) rotate(-1deg); }
-}
-@keyframes scaleing {
-	0% { transform: scale(1.0); }
-	50% { transform: scale(1.03); }
-	100% { transform: scale(1.0); }
+  0% { transform:scale(0.9) translate(1px, 1px) rotate(0deg); }
+  10% { transform:scale(0.9) translate(-1px, -2px) rotate(-1deg); }
+  20% { transform:scale(.9) translate(-2px, 0px) rotate(1deg); }
+  30% { transform:scale(.9) translate(2px, 2px) rotate(0deg); }
+  40% { transform:scale(.9) translate(1px, -1px) rotate(1deg); }
+  50% { transform:scale(.9) translate(-1px, 2px) rotate(-1deg); }
+  60% { transform:scale(.9) translate(-2px, 1px) rotate(0deg); }
+  70% { transform:scale(.9) translate(2px, 1px) rotate(-1deg); }
+  80% { transform:scale(.9) translate(-1px, -1px) rotate(1deg); }
+  90% { transform:scale(.9) translate(1px, 2px) rotate(0deg); }
+  100% { transform:scale(.9) translate(1px, -2px) rotate(-1deg); }
 }
 
-@keyframes  rotate{
-	0% { transform:  rotate(0deg); }
-  25% { transform: rotate(-3deg); }
-  50% { transform: rotate(0deg); }
-  75% { transform:  rotate(3deg); }
-  100% { transform:  rotate(0deg); }
-}
 
 
 
@@ -233,8 +221,8 @@ footer a:hover {
 		width: 160px;
 		height: 160px;
 	}
-	img:hover:not(:active) {
-		transform: scale(0.9);
+	img:hover {
+		animation: shake 1s ease-in-out infinite;
 		opacity: 0.5;
 	}
 
