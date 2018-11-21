@@ -67,13 +67,14 @@ corpus.context = [  // Wishes? Forsights
 	"in your friendships",
 	"in public places",
 	"in your family",
-	"during sports",
+//	"during sports",
 	"during your leisure time",
 	"in your household",
 	"in public",
 	"at university",
 	"at evening school",
-	"at your human intelligence tasks"
+	"at your human intelligence jobs",
+	"during the holidays"
 ]
 
 corpus.verb = [
@@ -94,7 +95,7 @@ corpus.verb = [
 	"save you time",
 	"save you money",
 	"organize your tasks",
-	"give you informations",
+	"provide you essential infos",
 	"instruct you",
 	"help you make the right decisions",
 	"enhance your creativity"
