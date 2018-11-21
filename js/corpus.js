@@ -69,18 +69,17 @@ corpus.context = [  // Wishes? Forsights
 	"during work", //"auf der Arbeit"
 	"in your friendships",
 	"in public places",
+	"at the office",
 	"in your family",
 //	"during sports",
 	"during your leisure time",
 	"in your household",
-	"at housekeeping",
 	"in public",
 	"at university",
 	"at evening school",
 	"at your human intelligence jobs",
 	"during the holidays",
-	"in your health care",
-	"with heavy work"
+	"in your health care"
 ]
 
 corpus.verb = [
