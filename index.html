@@ -99,11 +99,12 @@
          function react(reaction){
           var sentence = document.getElementsByTagName("dd")[0].innerHTML;
 					var intro = document.getElementsByTagName("dt")[0].innerHTML;
+					var question = document.getElementsByTagName("dask")[0].innerHTML;
           var timer = new Date();
           var time = timer.toLocaleDateString() + " | " + timer.toLocaleTimeString();
           console.log(document.getElementsByTagName("dd")[0].innerHTML);
         $.ajax({
-            url: 'https://script.google.com/macros/s/AKfycbwFJyAzbKuVqbAK2URyiMJC8u_RmMi70Jl3HWlGpSxE-GqNdaCV/exec?time=' + time + '&sentence=' + sentence + '&reaction=' + reaction + '&@img='+ reaction + '.png' + '&intro=' + intro,
+            url: 'https://script.google.com/macros/s/AKfycbwFJyAzbKuVqbAK2URyiMJC8u_RmMi70Jl3HWlGpSxE-GqNdaCV/exec?time=' + time + '&sentence=' + sentence + '&reaction=' + reaction + '&@img='+ reaction + '.png' + '&intro=' + intro + '&dask=' + question,
             method: "GET",
             dataType: "json"
           }).success(function(){
