@@ -96,6 +96,15 @@
 
 
 		<script>
+		     var userID;
+
+				 if(localStorage.getItem("userID") === null){
+					 localStorage.setItem("userID", Date.now())
+				 } else {
+					 userID = localStorage.getItem("userID")
+				 }
+				 console.log(userID)
+
          function react(reaction){
 					var bg = document.body.style.backgroundColor;
           var sentence = document.getElementsByTagName("dd")[0].innerHTML;
@@ -105,7 +114,7 @@
           var time = timer.toLocaleDateString() + " | " + timer.toLocaleTimeString();
           console.log(document.getElementsByTagName("dd")[0].innerHTML);
         $.ajax({
-            url: 'https://script.google.com/macros/s/AKfycbwFJyAzbKuVqbAK2URyiMJC8u_RmMi70Jl3HWlGpSxE-GqNdaCV/exec?time=' + time + '&sentence=' + sentence + '&reaction=' + reaction + '&@img='+ reaction + '.png' + '&intro=' + intro + '&dask=' + question + '&@color=/colors_bg/' + bg + '.jpg',
+            url: 'https://script.google.com/macros/s/AKfycbwFJyAzbKuVqbAK2URyiMJC8u_RmMi70Jl3HWlGpSxE-GqNdaCV/exec?time=' + time + '&userID=' + userID + '&sentence=' + sentence + '&reaction=' + reaction + '&@img='+ reaction + '.png' + '&intro=' + intro + '&dask=' + question + '&@color=/colors_bg/' + bg + '.jpg',
             method: "GET",
             dataType: "json"
           }).success(function(){
