@@ -97,24 +97,26 @@
 
 		<script>
 		     var userID;
+				 setTimeout(function(){
+					 if(localStorage.getItem("userID") === null){
+						 localStorage.setItem("userID", Date.now())}
+				 },300)
 
-				 if(localStorage.getItem("userID") === null){
-					 localStorage.setItem("userID", Date.now())
-				 } else {
-					 userID = localStorage.getItem("userID")
-				 }
-				 console.log(userID)
+
 
          function react(reaction){
+					 userID = localStorage.getItem("userID")
 					var bg = document.body.style.backgroundColor;
           var sentence = document.getElementsByTagName("dd")[0].innerHTML;
 					var intro = document.getElementsByTagName("dt")[0].innerHTML;
 					var question = document.getElementsByTagName("dask")[0].innerHTML;
           var timer = new Date();
           var time = timer.toLocaleDateString() + " | " + timer.toLocaleTimeString();
+					var rndnum = JSON.parse(document.getElementById("rndnum").innerHTML);
+
           console.log(document.getElementsByTagName("dd")[0].innerHTML);
         $.ajax({
-            url: 'https://script.google.com/macros/s/AKfycbwFJyAzbKuVqbAK2URyiMJC8u_RmMi70Jl3HWlGpSxE-GqNdaCV/exec?time=' + time + '&userID=' + userID + '&sentence=' + sentence + '&reaction=' + reaction + '&@img='+ reaction + '.png' + '&intro=' + intro + '&dask=' + question + '&@color=/colors_bg/' + bg + '.jpg',
+            url: 'https://script.google.com/macros/s/AKfycbwFJyAzbKuVqbAK2URyiMJC8u_RmMi70Jl3HWlGpSxE-GqNdaCV/exec?time=' + time + '&userID=' + userID + '&sentence=' + sentence + '&reaction=' + reaction + '&@img='+ reaction + '.png' + '&intro=' + intro + '&dask=' + question + '&@color=/colors_bg/' + bg + '.jpg' + '&AI=' + rndnum.who[0] + '&AI num=' + rndnum.who[1] + '&verb=' + rndnum.verb[0] + '&verb num=' + rndnum.verb[1] + '&context=' + rndnum.context[0] +'&context num=' + rndnum.context[1] + '&reasons=' + rndnum.noun[0] +'&reasons num=' + rndnum.noun[1],
             method: "GET",
             dataType: "json"
           }).success(function(){

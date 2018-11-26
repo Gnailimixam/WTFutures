@@ -81,6 +81,7 @@ function generateIdea() {
 	var template = templates[(Math.random() * templates.length) | 0];
 
 	var data = {};
+	var dnum = {"who":["",""], "verb":["",""], "noun":["",""], "context":["",""], "adjective":["",""]};
 
 	for(var prop in corpus) {
 		data[prop] = corpus[prop].concat();
@@ -95,12 +96,15 @@ function generateIdea() {
 		if(type == "who"){
 			index = (Math.random() * data[type].length) | 0;
 			console.log(index)
+
 		}
+
 		else {
 			//index = ((Math.random() * limits[type][1]) + limits[type][0]) | 0; // for using limits
 			index = (Math.random() * data[type].length) | 0;
 			console.log(type + index)
 		}
+		dnum[type] = [data[type].splice(index, 1)[0],index]
 
 		template = template.replace(match, data[type].splice(index, 1)[0]);
 
@@ -116,6 +120,7 @@ function generateIdea() {
 	//output += "<dd>" + "<span style='background-color:black;'>" + template + "</span>"+"</dd>";
 	output += "<dd>" + template + "</dd>";
 	output += "<dask>" + dask + "</dask>";
+	output += "<dnum id='rndnum' style='display:none'>" + JSON.stringify(dnum) + "</dnum>";
 	output += "</dl>";
 
 	return correctGrammar(output);
