@@ -14,11 +14,11 @@
  *
  */
 
-var templates = [
+var templates = [ // 6
 	"A @who will @verb @context because of @adjective @noun.",  // 1;
 	"Due to @adjective @noun, a @who will @verb @context.",
-	"A @who will @verb @context cause of @adjective @noun.",
-	"Thanks to the @noun, a @who will @verb @context.",
+	"A @who will @verb @context.",
+	"Thanks to the @adjective @noun, a @who will @verb @context.",
 	"In a world of @noun, a @who will @verb @context.",
 	"In a @adjective future, a @who will @verb @context."
 ];
@@ -48,109 +48,143 @@ var labels = [
 */
 
 corpus = {};
-corpus.who = [
-	"speaking AI" , //"Eine sprechende KI"
+corpus.who = [ //46
+	"speaking AI" , //remembering, eloquent,
+	"remembering assistant",
+	"eloquent intelligence",
 	"amusing intelligence",
 	"intelligent assistant",
 	"personal intelligent assistant",
-	"logical intelligence" ,
-	"intelligent robot" ,
-	"observing AI" ,  //= visual-spatial
+	"logical intelligence" ,//
+	"well-structured AI",
+	"planning intelligence",
+	"rational assistant",
+	"precise AI",
+	"trustable AI",
+	"complexity grasping assistant",
+	"objective AI" ,
+  "rational AI",
+	"intelligent robot" , //
+	"skillful robot",
+	"versatile robot",
+	"flexible robot",
+	"observing AI" ,  //
+	"noticing AI",
+	"visualising assistant",
+	"recognizing intelligence",
+	"localizing AI",
+	"discovering intelligence",
+	"overviewing AI",
+	"anticipating AI",
+	"identifying intelligence",
 	"detecting AI", //= visual-spatial
 	"social intelligence" ,
-	"social AI",
-	"ethical AI",
-	"emotional intelligence",
+	"social AI",//
+	"team-minded AI",
+	"empathic assistant",
+	"fair intelligence",
+	 "unselfish AI" ,
+	 "respectful intelligence",
+	 "reliable intelligence",
+	 "sensitive intelligence",
+	"ethical AI", //moral
+	"emotional intelligence",//
+	"sentient intelligence",
+	"gentle AI",
+	"caring intelligence",
+	"sympathetic AI",
 	"man-machine cooperation",
 	"man-AI collaboration"
 		]
 
-corpus.context = [  // Wishes? Forsights
+corpus.context = [  // 24
 	"during work", //"auf der Arbeit"
 	"in your friendships",
 	"in public places",
 	"at the office",
 	"in your family",
-//	"during sports",
+	"while spending time with your friends",
 	"during your leisure time",
-	"in your household",
+	"at your household tasks", //
+	"at cooking",
+	"when cleaning your flat",
+	"while travelling the world",
+	"when gardening",
+	"when shopping new fashion",
+	"while calling your friends",
 	"in public",
+	"at dealing with strangers",
 	"at university",
 	"at evening school",
 	"at your human intelligence jobs",
+	"at your craftsman jobs",
 	"during the holidays",
+	"on vacation",
+	"on a date",
+	"at looking after your parents",
 	"in your health care"
 ]
 
-corpus.verb = [
-	"empower you",
-	"strengthen you",
-	"help you",
-	"enhance your creativity",
+corpus.verb = [ //37
+	"empower you",//0
+	"strengthen you",//1
+	"help you",//2
+	"enhance your creativity",//3
 	"need your creativity",
-
 	"provide you essential infos",
 	"give you informations",
 	"give you fascinating insights",
-
 	"help you make the right decisions",
 	"support you to decide",
-
 	"save you time",
 	"give you more free time" ,
 	"do the boring stuff" ,
-
 	"save you money",
 	"negotiate the best for you",
-
 	"make you become healthier",
-
 	"teach you new stuff",
 	"instruct you",
-
 	"transport you",
-
 	"make you more money",
-
 	"organize your tasks",
-
 	"manage your finances",
-
 	"entertain you",
-
 	"solve your problems",
 	"do what's good for you",
-
 	"organize your stuff",
-
 	"do your jobs",
-
 	"be your friend",
-
 	"encourage you to be more creative",
 	"encourage you to do things voluntarily",
-
+	"encourage you to do the disliked stuff too",
 	"replace you",
 	"be better than you",
+	"be faster than you",
 	"tell you what's important",
-	"tell you what's right"
+	"tell you what's right",
+	"organize your life",
+	"look after your children"
 ]
 
-corpus.adjective = [
+corpus.adjective = [ //10
 	"enormous",
 	"ground-breaking",
 	"radical",
 	"improved",
 	"comprehensive",
+	"enhanced",
+	"advanced",
+	"trend-setting",
+	"pioneering",
 	"aligned"
 ]
 
-corpus.noun = [
+corpus.noun = [ //14
 	"changes in society",
 	"social changes",
 	"changes in law",
 	"data privacy acts" ,
-	"AI laws" ,
+	"AI laws",
 	"jumps in technology",
 	"technological developments",
 	"communication possibilities",
@@ -159,5 +193,6 @@ corpus.noun = [
 	"human computation power",
 	"neuromorphig computing power",
 	"AI managed companies",
+	"abilities in mood analysis",
 	"communication technologies"
 ]
