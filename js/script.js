@@ -95,16 +95,16 @@ function generateIdea() {
 		match = result[0];
 		if(type == "who"){
 			index = (Math.random() * data[type].length) | 0;
-			console.log(index)
-
+			console.log(index);
 		}
 
 		else {
 			//index = ((Math.random() * limits[type][1]) + limits[type][0]) | 0; // for using limits
 			index = (Math.random() * data[type].length) | 0;
-			console.log(type + index)
+			console.log(type + index);
 		}
-		dnum[type] = [data[type].splice(index, 1)[0],index]
+
+		dnum[type] = [data[type].splice(index, 1)[0],index];
 
 		template = template.replace(match, data[type].splice(index, 1)[0]);
 
