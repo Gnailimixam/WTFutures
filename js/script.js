@@ -93,23 +93,15 @@ function generateIdea() {
 
 		type = result[1];
 		match = result[0];
-		if(type == "who"){
-			index = (Math.random() * data[type].length) | 0;
-			console.log(index);
-		}
-
-		else {
-			//index = ((Math.random() * limits[type][1]) + limits[type][0]) | 0; // for using limits
-			index = (Math.random() * data[type].length) | 0;
-			console.log(type + index);
-		}
-
-		dnum[type] = [data[type].splice(index, 1)[0],index];
+		index = (Math.random() * data[type].length) | 0;
 
 		template = template.replace(match, data[type].splice(index, 1)[0]);
 
 		regex.lastIndex = 0;
 		result = regex.exec(template);
+		console.log(type + index);
+
+		dnum[type] = [data[type].splice(index, 1)[0],index];
 	}
 
 	var intro = phrases[(Math.random() * phrases.length) | 0];
@@ -129,7 +121,6 @@ function generateIdea() {
 // correct grammar
 
 function correctGrammar(input) {
-
 	// change 'a' to 'an' when before a vowel (I know this is not not always true!)
 	input = input.replace(vowel, "$1n$2$3$6$7");
 
