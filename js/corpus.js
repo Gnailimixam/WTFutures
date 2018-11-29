@@ -110,7 +110,7 @@ corpus.context = [  // 24
 	"when cleaning your flat",
 	"while travelling the world",
 	"when gardening",
-	"when shopping new fashion",
+	"while shopping",
 	"while calling your friends",
 	"in public",
 	"at dealing with strangers",
@@ -119,8 +119,8 @@ corpus.context = [  // 24
 	"at your human intelligence jobs",
 	"at your craftsman jobs",
 	"during the holidays",
-	"on vacation",
-	"on a date",
+	"when on vacation",
+	"when on a date",
 	"at looking after your parents",
 	"in your health care"
 ]
@@ -131,7 +131,7 @@ corpus.verb = [ //37
 	"help you",//2
 	"enhance your creativity",//3
 	"need your creativity",
-	"provide you essential infos",
+	"provide you essential informations",
 	"give you informations",
 	"give you fascinating insights",
 	"help you make the right decisions",
