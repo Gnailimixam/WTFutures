@@ -135,7 +135,7 @@ corpus.verb = [ //37
 	"give you informations",
 	"give you fascinating insights",
 	"help you make the right decisions",
-	"support you to decide",
+	"support you make the right decision",
 	"save you time",
 	"give you more free time" ,
 	"do the boring stuff" ,
