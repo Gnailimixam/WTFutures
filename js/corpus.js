@@ -49,13 +49,13 @@ var labels = [
 
 corpus = {};
 corpus.who = [ //46
-	"speaking AI" , //remembering, eloquent,
+	"speaking AI" ,
 	"remembering assistant",
 	"eloquent intelligence",
 	"amusing intelligence",
 	"intelligent assistant",
 	"personal intelligent assistant",
-	"logical intelligence" ,//
+	"logical intelligence" ,
 	"well-structured AI",
 	"planning intelligence",
 	"rational assistant",
@@ -64,11 +64,11 @@ corpus.who = [ //46
 	"complexity grasping assistant",
 	"objective AI" ,
   "rational AI",
-	"intelligent robot" , //
+	"intelligent robot" ,
 	"skillful robot",
 	"versatile robot",
 	"flexible robot",
-	"observing AI" ,  //
+	"observing AI" ,
 	"noticing AI",
 	"visualising assistant",
 	"recognizing intelligence",
@@ -77,9 +77,9 @@ corpus.who = [ //46
 	"overviewing AI",
 	"anticipating AI",
 	"identifying intelligence",
-	"detecting AI", //= visual-spatial
+	"detecting AI",
 	"social intelligence" ,
-	"social AI",//
+	"social AI",
 	"team-minded AI",
 	"empathic assistant",
 	"fair intelligence",
@@ -87,8 +87,8 @@ corpus.who = [ //46
 	 "respectful intelligence",
 	 "reliable intelligence",
 	 "sensitive intelligence",
-	"ethical AI", //moral
-	"emotional intelligence",//
+	"ethical AI",
+	"emotional intelligence",
 	"sentient intelligence",
 	"gentle AI",
 	"caring intelligence",
@@ -98,14 +98,14 @@ corpus.who = [ //46
 		]
 
 corpus.context = [  // 24
-	"during work", //"auf der Arbeit"
+	"during work",
 	"in your friendships",
 	"in public places",
 	"at the office",
 	"in your family",
 	"while spending time with your friends",
 	"during your leisure time",
-	"at your household tasks", //
+	"at your household tasks",
 	"at cooking",
 	"when cleaning your flat",
 	"while travelling the world",
@@ -126,10 +126,10 @@ corpus.context = [  // 24
 ]
 
 corpus.verb = [ //37
-	"empower you",//0
-	"strengthen you",//1
-	"help you",//2
-	"enhance your creativity",//3
+	"empower you",
+	"strengthen you",
+	"help you",
+	"enhance your creativity",
 	"need your creativity",
 	"provide you essential informations",
 	"give you informations",
