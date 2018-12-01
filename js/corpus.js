@@ -16,11 +16,11 @@
 
 var templates = [ // 6
 	"A @who will @verb @context because of @adjective @noun.",  // 1;
-	"Due to @adjective @noun, a @who will @verb @context.",
 	"A @who will @verb @context.",
 	"Thanks to the @adjective @noun, a @who will @verb @context.",
 	"In a world of @noun, a @who will @verb @context.",
-	"In a @adjective future, a @who will @verb @context."
+	"In a @adjective future, a @who will @verb @context.",
+	"Living in a @adjective society, a @who will @verb @context."
 ];
 
 var phrases = [
